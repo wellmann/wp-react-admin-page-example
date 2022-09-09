@@ -1,0 +1,31 @@
+{
+  "name": "@wellmann/wp-react-admin-page-example",
+  "version": "0.1.0",
+  "description": "WordPress admin page developed with React and Gutenberg components.",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "npm run watch",
+    "watch": "webpack -w --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wellmann/wp-react-admin-page-example.git"
+  },
+  "author": {
+    "name": "Kevin Wellmann",
+    "url": "http://kevin.wellmann.io"
+  },
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/wellmann/wp-react-admin-page-example/issues"
+  },
+  "homepage": "https://github.com/wellmann/wp-react-admin-page-example#readme",
+  "dependencies": {
+    "@wellmann/gutenberg-blocks-components": "github:wellmann/gutenberg-blocks-components#2ebb91ec8b2922bb0ebad62b2ae0b1597fad4a7a"
+  },
+  "devDependencies": {
+    "@wordpress/components": "^20.0.0",
+    "@wordpress/element": "^4.14.0"
+  }
+}
