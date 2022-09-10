@@ -15,7 +15,7 @@ import { useEffect, useState } from "@wordpress/element";
 import style from "./App.module.scss";
 
 interface AppProps {
-  title: number
+  title: string
 }
 
 const App = ({ title }: AppProps) => {

@@ -1,5 +1,5 @@
 import { render } from '@wordpress/element';
-import App from './app';
+import App from './App';
 
 document.addEventListener('DOMContentLoaded', () => {
   const appRoot = document.getElementById('root');

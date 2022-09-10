@@ -1,7 +1,7 @@
 let [editorConfig] = require('@wellmann/gutenberg-blocks-components/configs/webpack.config');
 
 editorConfig.entry = {
-  'app': './src/app.js',
+  'app': './src/entry.tsx',
 };
 
 editorConfig.externals = {
