@@ -37,33 +37,33 @@ const App = ({ title }: AppProps) => {
         <Spacer marginY={ 6 } />
       </>
       }
-      <Card>
-        <TabPanel
-          activeClass="is-active"
-          onSelect={ setTab }
-          initialTabName={ tab }
-          tabs={ [
-            {
-              name: 'tab-1',
-              title: 'Tab 1'
-            },
-            {
-              name: 'tab-2',
-              title: 'Tab 2'
-            },
-            {
-              name: 'tab-3',
-              title: 'Tab 3'
-            },
-          ] }
-        >
-          { () => null }
-        </TabPanel>
-      </Card>
-      <Spacer marginY={ 9 } />
-      { tab === 'tab-1' && <TabOne /> }
-      { tab === 'tab-2' && <TabTwo /> }
-      { tab === 'tab-3' && <TabThree /> }
+      <TabPanel
+        activeClass="is-active"
+        onSelect={ setTab }
+        initialTabName={ tab }
+        tabs={ [
+          {
+            name: 'tab-1',
+            title: 'Tab 1',
+            component: TabOne
+          },
+          {
+            name: 'tab-2',
+            title: 'Tab 2',
+            component: TabTwo
+          },
+          {
+            name: 'tab-3',
+            title: 'Tab 3',
+            component: TabThree
+          },
+        ] }
+      >
+        { ({ component: TabComponent }: { component: React.FunctionComponent }) => <>
+          <Spacer marginY={ 9 } />
+          <TabComponent />
+        </> }
+      </TabPanel>
       { success && <Snackbar
         onRemove={ () => setSuccess(null) }
         className={ style.snackbar }
