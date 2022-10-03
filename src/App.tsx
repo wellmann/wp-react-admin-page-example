@@ -12,6 +12,7 @@ import {
   __experimentalSpacer as Spacer
 } from '@wordpress/components';
 import { useEffect, useState } from "@wordpress/element";
+import { __ } from '@wordpress/i18n';
 import style from "./App.module.scss";
 
 interface AppProps {
@@ -26,7 +27,7 @@ const App = ({ title }: AppProps) => {
   return (
     <>
       <h1 className="wp-heading-inline">{ title }</h1>
-      <button className="page-title-action">Action</button>
+      <button className="page-title-action">{ __('Action', 'wp-react-page-admin-example') }</button>
       <hr className="wp-header-end" />
       <Spacer marginY={ 3 } />
       { error && <>
@@ -44,17 +45,17 @@ const App = ({ title }: AppProps) => {
         tabs={ [
           {
             name: 'tab-1',
-            title: 'Tab 1',
+            title: __('Tab 1', 'wp-react-page-admin-example'),
             component: TabOne
           },
           {
             name: 'tab-2',
-            title: 'Tab 2',
+            title: __('Tab 2', 'wp-react-page-admin-example'),
             component: TabTwo
           },
           {
             name: 'tab-3',
-            title: 'Tab 3',
+            title: __('Tab 3', 'wp-react-page-admin-example'),
             component: TabThree
           },
         ] }
@@ -115,12 +116,12 @@ const Box = () => {
 
   return (
     <div>
-      <h2>Heading</h2>
+      <h2>{ __('Heading', 'wp-react-page-admin-example') }</h2>
       <Card>
         <CardBody>
           <TextControl
-            help="Help text to explain the input."
-            label="Label Text"
+            help={ __('Help text to explain the input.', 'wp-react-page-admin-example') }
+            label={ __('Label Text', 'wp-react-page-admin-example') }
             onChange={ setInputValue }
             value={ inputValue }
           />
@@ -131,7 +132,7 @@ const Box = () => {
             variant="primary"
             onClick={ () => setIsProcessing(true) }
           >
-            { "Save" }
+            { __('Save', 'wp-react-page-admin-example') }
           </Button>
         </CardFooter>
       </Card>
