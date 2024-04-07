@@ -10,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [16.x]
 
     steps:
     - uses: actions/checkout@v3
@@ -33,3 +33,13 @@ jobs:
 
     - name: Build
       run: npm run build
+
+    - name: Zip
+      run: zip -r "${GITHUB_WORKSPACE}/${GITHUB_REPOSITORY#*/}.zip" .
+      shell: bash
+
+    - name: Upload zip
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ github.event.repository.name }}
+        path: "${GITHUB_WORKSPACE}/${GITHUB_REPOSITORY#*/}.zip"

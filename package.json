@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/wellmann/wp-react-admin-page-example#readme",
   "dependencies": {
-    "@wellmann/gutenberg-blocks-components": "github:wellmann/gutenberg-blocks-components#2ebb91ec8b2922bb0ebad62b2ae0b1597fad4a7a"
+    "@wellmann/gutenberg-blocks-components": "git+https://git@github.com/wellmann/gutenberg-blocks-components.git#73f7194b5846bb25ccba8262c103e6e17309af19"
   },
   "devDependencies": {
     "@wordpress/components": "^20.0.0",
