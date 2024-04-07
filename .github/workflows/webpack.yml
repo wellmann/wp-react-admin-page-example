@@ -35,11 +35,11 @@ jobs:
       run: npm run build
 
     - name: Zip
-      run: git archive -o "${GITHUB_REPOSITORY}.zip" --prefix="${GITHUB_REPOSITORY}/" ${GITHUB_SHA}
+      run: git archive -o "${GITHUB_REPOSITORY#*/}.zip" --prefix="${GITHUB_REPOSITORY#*/}/" ${GITHUB_SHA}
       shell: bash
 
     - name: Upload zip
       uses: actions/upload-artifact@v4
       with:
         name: ${{ github.event.repository.name }}
-        path: ${{ github.repository }}.zip
+        path: ${{ github.event.repository.name }}.zip
