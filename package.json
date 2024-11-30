@@ -5,8 +5,8 @@
   "main": "dist/app.js",
   "scripts": {
     "start": "npm run watch",
-    "watch": "webpack -w --mode=development",
-    "build": "webpack --mode=production"
+    "watch": "npm run build -- --watch",
+    "build": "node esbuild.mjs"
   },
   "repository": {
     "type": "git",
@@ -21,12 +21,10 @@
     "url": "https://github.com/wellmann/wp-react-admin-page-example/issues"
   },
   "homepage": "https://github.com/wellmann/wp-react-admin-page-example#readme",
-  "dependencies": {
-    "@wellmann/gutenberg-blocks-components": "git+https://git@github.com/wellmann/gutenberg-blocks-components.git#73f7194b5846bb25ccba8262c103e6e17309af19"
-  },
   "devDependencies": {
-    "@wordpress/components": "^20.0.0",
-    "@wordpress/element": "^4.14.0",
-    "@wordpress/i18n": "^4.18.0"
+    "@wordpress/components": "^28.13.0",
+    "@wordpress/element": "^6.13.0",
+    "@wordpress/i18n": "^5.13.0",
+    "esbuild": "^0.24.0"
   }
 }

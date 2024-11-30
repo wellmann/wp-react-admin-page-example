@@ -20,6 +20,11 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+define(__NAMESPACE__ . '\\MAIN_FILE', __FILE__);
+define(__NAMESPACE__ . '\\BASENAME', plugin_basename(MAIN_FILE));
+define(__NAMESPACE__ . '\\DIR_PATH', plugin_dir_path(MAIN_FILE));
+define(__NAMESPACE__ . '\\DIR_URL', plugin_dir_url(MAIN_FILE));
+
 const ADMIN_PAGE_SLUG = 'kwio-react-page';
 
 add_action('admin_menu', function () {
@@ -43,7 +48,7 @@ add_action('admin_enqueue_scripts', function ($hookSuffix) {
         return;
     }
 
-    $assetManifestFile = plugin_dir_path(__FILE__) . 'dist/app.asset.php';
+    $assetManifestFile = DIR_PATH . 'dist/app.asset.php';
     if (!file_exists($assetManifestFile)) {
         return;
     }
@@ -52,7 +57,7 @@ add_action('admin_enqueue_scripts', function ($hookSuffix) {
 
     wp_enqueue_script(
         ADMIN_PAGE_SLUG,
-        plugin_dir_url(__FILE__) . 'dist/app.js',
+        DIR_URL . 'dist/app.js',
         $assetManifest['dependencies'],
         $assetManifest['version']
     );
@@ -60,14 +65,14 @@ add_action('admin_enqueue_scripts', function ($hookSuffix) {
     wp_set_script_translations(
         ADMIN_PAGE_SLUG,
         'wp-react-page-admin-example',
-        plugin_dir_path(__FILE__) . 'lang'
+        DIR_PATH . 'lang'
     );
 
     wp_enqueue_style(
         ADMIN_PAGE_SLUG,
-        plugin_dir_url(__FILE__) . 'dist/app.css',
+        DIR_URL . 'dist/app.css',
         ['wp-components'],
-        filemtime(plugin_dir_path(__FILE__) . 'dist/app.css')
+        filemtime(DIR_PATH . 'dist/app.css')
     );
 });
 

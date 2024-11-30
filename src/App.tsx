@@ -13,7 +13,7 @@ import {
 } from '@wordpress/components';
 import { useEffect, useState } from "@wordpress/element";
 import { __ } from '@wordpress/i18n';
-import style from "./App.module.scss";
+import style from "./App.module.css";
 
 interface AppProps {
   title: string
