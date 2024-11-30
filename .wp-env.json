@@ -1,0 +1,12 @@
+{
+  "phpVersion": "8.2",
+  "plugins": ["."],
+  "config": {
+    "WP_DEBUG": true,
+    "WP_DEBUG_DISPLAY": false,
+    "WP_DEBUG_LOG": "/var/www/html/wp-content/plugins/wp-react-admin-page-example/debug.log"
+  },
+  "lifecycleScripts": {
+    "afterStart": "wp-env run cli wp user update 1 --admin_color=modern"
+  }
+}
