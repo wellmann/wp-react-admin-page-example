@@ -2,11 +2,10 @@
   "name": "@wellmann/wp-react-admin-page-example",
   "version": "0.1.0",
   "description": "WordPress admin page developed with React and Gutenberg components.",
-  "main": "dist/app.js",
   "scripts": {
     "start": "npm run watch",
     "watch": "npm run build -- --watch",
-    "build": "node esbuild.mjs"
+    "build": "node ./bin/build.mjs"
   },
   "repository": {
     "type": "git",
@@ -22,9 +21,11 @@
   },
   "homepage": "https://github.com/wellmann/wp-react-admin-page-example#readme",
   "devDependencies": {
+    "@wordpress/api-fetch": "^7.13.0",
     "@wordpress/components": "^28.13.0",
     "@wordpress/element": "^6.13.0",
     "@wordpress/i18n": "^5.13.0",
-    "esbuild": "^0.24.0"
+    "esbuild": "^0.24.0",
+    "esbuild-plugin-svgr": "^3.1.0"
   }
 }

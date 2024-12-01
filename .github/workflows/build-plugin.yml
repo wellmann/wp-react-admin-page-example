@@ -1,4 +1,4 @@
-name: NodeJS with Webpack
+name: Build plugin
 
 on:
   push:
@@ -20,22 +20,34 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Cache
+    - name: Cache NPM dependencies
       uses: actions/cache@v4.0.2
       id: node_modules-cache
       with:
         path: node_modules
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
-    - name: Install dependencies
+    - name: Install NPM dependencies
       if: steps.node_modules-cache.outputs.cache-hit != 'true'
       run: npm ci
 
-    - name: Build
+    - name: Build assets
       run: npm run build
 
+    - name: Cache Composer dependencies
+      uses: actions/cache@v4.0.2
+      id: vendor-cache
+      with:
+        path: vendor
+        key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
+
+    - name: Install Composer dependencies
+      uses: php-actions/composer@v6
+      with:
+        php_version: "8.2"
+
     - name: Zip
-      run: git archive -o "${GITHUB_REPOSITORY#*/}.zip" --prefix="${GITHUB_REPOSITORY#*/}/" ${GITHUB_SHA}
+      run: zip -r "${GITHUB_REPOSITORY#*/}.zip" . -x .git\* -x .github\* -x node_modules\* -x src\* -x .DS_Store
       shell: bash
 
     - name: Upload zip

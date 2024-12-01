@@ -1,4 +1,7 @@
+#!/usr/bin/env node
+
 import * as esbuild from 'esbuild';
+import svgr from 'esbuild-plugin-svgr';
 import fs from 'fs';
 import crypto from 'crypto';
 
@@ -125,7 +128,7 @@ const wpDepsPlugin = {
 
 const buildOptions = {
   entryPoints: {
-    app: './src/entry.jsx'
+    app: './assets/entry.jsx'
   },
   outdir: 'dist',
   bundle: true,
@@ -137,7 +140,9 @@ const buildOptions = {
   jsxFactory: 'wp.element.createElement',
   jsxImportSource: 'react',
   jsxFragment: 'wp.element.Fragment',
+  tsconfig: './tsconfig.json',
   plugins: [
+    svgr(),
     wpDepsPlugin,
     cleanup()
   ]

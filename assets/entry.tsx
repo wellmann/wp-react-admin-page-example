@@ -1,5 +1,5 @@
 import { createRoot } from '@wordpress/element';
-import App from './App';
+import App from './components/App';
 
 document.addEventListener('DOMContentLoaded', () => {
   const appRoot = document.getElementById('root');
@@ -8,5 +8,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const root = createRoot(appRoot);
-  root.render(<App title={ appRoot.dataset.title } />);
+  root.render(<App title={ appRoot?.dataset?.title || '' } />);
 });

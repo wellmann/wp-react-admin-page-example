@@ -1,3 +1,3 @@
 # WP React Admin Page Example
 
-![1](screenshot.png)
+![1](screenshot.jpg)

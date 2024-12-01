@@ -1,0 +1,40 @@
+/* Set brand color here */
+/* :root {
+  --wp-admin-theme-color: hotpink;
+  --wp-admin-theme-color-darker-10: deeppink;
+  --wp-admin-theme-color-darker-20: deeppink;
+} */
+
+.topBar {
+  margin-top: -10px;
+  margin-inline: -22px -20px;
+  padding-block: 1em;
+  padding-inline: 22px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+  svg {
+    max-width: 2em;
+    max-height: 2em;
+    vertical-align: middle;
+    margin-inline-end: .5em;
+    color: var(--wp-admin-theme-color);
+  }
+
+  h1 {
+    padding: 0;
+  }
+}
+
+.mainNav :global(.components-tab-panel__tabs) {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, .1) 0 0 0 1px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.snackbar {
+  position: fixed;
+  bottom: 2.5em;
+  z-index: 999;
+}
