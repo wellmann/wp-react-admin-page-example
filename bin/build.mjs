@@ -173,9 +173,11 @@ function cleanup() {
     setup(build) {
       const options = build.initialOptions;
       build.onStart(() => {
-        fs.readdirSync(options.outdir).forEach((path) => {
-          fs.unlinkSync(options.outdir + '/' + path);
-        });
+        if (fs.existsSync(options.outdir)) {
+          fs.readdirSync(options.outdir).forEach((path) => {
+            fs.unlinkSync(options.outdir + '/' + path);
+          });
+        }
       });
     },
   };
