@@ -25,7 +25,7 @@
     "@wordpress/components": "^28.13.0",
     "@wordpress/element": "^6.13.0",
     "@wordpress/i18n": "^5.13.0",
-    "esbuild": "^0.24.0",
+    "esbuild": "^0.23.1",
     "esbuild-plugin-svgr": "^3.1.0"
   }
 }
