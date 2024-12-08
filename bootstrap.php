@@ -9,7 +9,7 @@
  * Author: Kevin Wellmann
  * License: GPL-3.0+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
- * Text Domain: wp-react-page-admin-example
+ * Text Domain: wp-react-admin-page-example
  * Domain Path: /lang
  * GitHub Plugin URI: https://github.com/wellmann/wp-react-admin-page-example
  */

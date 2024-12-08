@@ -4,8 +4,8 @@ namespace KWIO\ReactAdminPage;
 
 add_action('admin_menu', function () {
     add_menu_page(
-        __('React Page', 'wp-react-page-admin-example'),
-        __('React Page', 'wp-react-page-admin-example'),
+        __('React Page', 'wp-react-admin-page-example'),
+        __('React Page', 'wp-react-admin-page-example'),
         'manage_options',
         ADMIN_PAGE_SLUG,
         function () {
@@ -39,7 +39,7 @@ add_action('admin_enqueue_scripts', function ($hookSuffix) {
 
     wp_set_script_translations(
         ADMIN_PAGE_SLUG,
-        'wp-react-page-admin-example',
+        'wp-react-admin-page-example',
         DIR_PATH . 'lang'
     );
 
@@ -56,8 +56,8 @@ add_action('admin_enqueue_scripts', function ($hookSuffix) {
 
 add_action('init', function () {
     load_plugin_textdomain(
-        'wp-react-page-admin-example',
+        'wp-react-admin-page-example',
         false,
-        dirname(plugin_basename(__FILE__))  . '/lang'
+        dirname(BASENAME)  . '/lang'
     );
 });

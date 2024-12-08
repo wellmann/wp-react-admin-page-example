@@ -1,4 +1,4 @@
-# Copyright (C) 2022 Kevin Wellmann
+# Copyright (C) 2024 Kevin Wellmann
 # This file is distributed under the GPL-3.0+.
 msgid ""
 msgstr ""
@@ -9,10 +9,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-10-03T14:18:04+00:00\n"
+"POT-Creation-Date: 2024-12-08T13:32:43+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.6.0\n"
-"X-Domain: wp-react-page-admin-example\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: wp-react-admin-page-example\n"
 
 #. Plugin Name of the plugin
 msgid "React Admin Page Example"
@@ -30,39 +30,82 @@ msgstr ""
 msgid "Kevin Wellmann"
 msgstr ""
 
-#: bootstrap.php:27
-#: bootstrap.php:28
+#: src/hooks.php:7
+#: src/hooks.php:8
 msgid "React Page"
 msgstr ""
 
-#: dist/app.js:1
+#: dist/app.js:141
+#: dist/app.js:192
 msgid "Heading"
 msgstr ""
 
-#: dist/app.js:1
+#: dist/app.js:146
+msgid "Options"
+msgstr ""
+
+#: dist/app.js:149
+#: dist/app.js:151
+msgid "First option"
+msgstr ""
+
+#: dist/app.js:154
+#: dist/app.js:155
+msgid "Second option"
+msgstr ""
+
+#: dist/app.js:165
 msgid "Help text to explain the input."
 msgstr ""
 
-#: dist/app.js:1
+#: dist/app.js:166
 msgid "Label Text"
 msgstr ""
 
-#: dist/app.js:1
+#: dist/app.js:178
 msgid "Save"
 msgstr ""
 
-#: dist/app.js:1
-msgid "Action"
+#: dist/app.js:254
+msgid "This is an example error message."
 msgstr ""
 
-#: dist/app.js:1
+#: dist/app.js:255
+msgid "Example success"
+msgstr ""
+
+#: dist/app.js:279
+msgid "Click me!"
+msgstr ""
+
+#: dist/app.js:283
+msgid "Or visit a link for more info"
+msgstr ""
+
+#: dist/app.js:289
+msgid "Announcement banner"
+msgstr ""
+
+#: dist/app.js:304
 msgid "Tab 1"
 msgstr ""
 
-#: dist/app.js:1
+#: dist/app.js:309
 msgid "Tab 2"
 msgstr ""
 
-#: dist/app.js:1
+#: dist/app.js:314
 msgid "Tab 3"
+msgstr ""
+
+#: dist/app.js:382
+msgid "Help"
+msgstr ""
+
+#: dist/app.js:402
+msgid "Created with <3 using"
+msgstr ""
+
+#: dist/app.js:420
+msgid "App version"
 msgstr ""

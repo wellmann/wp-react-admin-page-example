@@ -16,5 +16,9 @@
             "email": "kevin@wellmann.io"
         }
     ],
+    "scripts": {
+        "make-pot": "wp i18n make-pot . lang/wp-react-admin-page-example.pot",
+        "make-json": "wp i18n make-json lang --no-purge"
+    },
     "require": {}
 }

@@ -24,62 +24,65 @@ const App = ({ title }: { title: string }) => {
 
   useEffect(() => {
     setShowAnnouncement(true);
-    setError(__('This is an example error message.', 'wp-react-page-admin-example'));
-    setSuccess(__('Example success', 'wp-react-page-admin-example'));
+    setError(__('This is an example error message.', 'wp-react-admin-page-example'));
+    setSuccess(__('Example success', 'wp-react-admin-page-example'));
   }, []);
 
   return (
-    <Grid
-      columns={ 1 }
-      gap={ 12 }
-    >
+    <>
       <TopBar
         title={ title }
       />
-      { showAnnouncement && (
-        <Notice
-          status="info"
-          onRemove={ () => setShowAnnouncement(null) }
-          actions={[
+      <Spacer marginY={ 12 } />
+      <Grid
+        columns={ 1 }
+        gap={ 12 }
+        className={ style.inner }
+      >
+        { showAnnouncement && (
+          <Notice
+            status="info"
+            onRemove={ () => setShowAnnouncement(null) }
+            actions={[
+              {
+                label: __('Click me!', 'wp-react-admin-page-example'),
+                onClick: () => setShowAnnouncement(null)
+              },
+              {
+                label: __('Or visit a link for more info', 'wp-react-admin-page-example'),
+                url: 'https://wordpress.org',
+                variant: 'link'
+              }
+            ]}
+          >
+            <h2>{ __('Announcement banner', 'wp-react-admin-page-example') }</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+          </Notice>
+        ) }
+        <TabPanel
+          activeClass="is-active"
+          onSelect={ setTab }
+          initialTabName={ tab }
+          className={ style.mainNav }
+          tabs={ [
             {
-              label: 'Click me!',
-              onClick: () => setShowAnnouncement(null)
+              name: 'tab-1',
+              title: __('Tab 1', 'wp-react-admin-page-example'),
+              component: TabOne
             },
             {
-              label: 'Or visit a link for more info',
-              url: 'https://wordpress.org',
-              variant: 'link'
-            }
-          ]}
+              name: 'tab-2',
+              title: __('Tab 2', 'wp-react-admin-page-example'),
+              component: TabTwo
+            },
+            {
+              name: 'tab-3',
+              title: __('Tab 3', 'wp-react-admin-page-example'),
+              component: TabThree
+            },
+          ] }
         >
-          <h2>Announcement banner</h2>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-        </Notice>
-      ) }
-      <TabPanel
-        activeClass="is-active"
-        onSelect={ setTab }
-        initialTabName={ tab }
-        className={ style.mainNav }
-        tabs={ [
-          {
-            name: 'tab-1',
-            title: __('Tab 1', 'wp-react-page-admin-example'),
-            component: TabOne
-          },
-          {
-            name: 'tab-2',
-            title: __('Tab 2', 'wp-react-page-admin-example'),
-            component: TabTwo
-          },
-          {
-            name: 'tab-3',
-            title: __('Tab 3', 'wp-react-page-admin-example'),
-            component: TabThree
-          },
-        ] }
-      >
-        { (tab) => {
+          { (tab) => {
             const TabComponent = tab.component;
             return (
               <>
@@ -100,8 +103,10 @@ const App = ({ title }: { title: string }) => {
                 </Grid>
               </>
             );
-        }}
-      </TabPanel>
+          }}
+        </TabPanel>
+        <Spacer marginY={ 12 } />
+      </Grid>
       { success && (
         <Snackbar
           onRemove={ () => setSuccess(null) }
@@ -110,8 +115,7 @@ const App = ({ title }: { title: string }) => {
           { success }
         </Snackbar>
       ) }
-      <Spacer marginY={ 12 } />
-    </Grid>
+    </>
   );
 }
 
@@ -131,7 +135,7 @@ const TopBar = ({ title }: { title: string }) => {
         />
         <h1>{ title }</h1>
       </Flex>
-      <ExternalLink href="https://google.com">Help</ExternalLink>
+      <ExternalLink href="https://google.com">{ __('Help', 'wp-react-admin-page-example') }</ExternalLink>
     </Flex>
   );
 };

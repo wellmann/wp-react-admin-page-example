@@ -1,17 +1,32 @@
 /* Set brand color here */
-/* :root {
+/*:root {
   --wp-admin-theme-color: hotpink;
-  --wp-admin-theme-color-darker-10: deeppink;
+  --wp-admin-theme-color-darker-10: hotpink;
   --wp-admin-theme-color-darker-20: deeppink;
-} */
+}*/
+
+:global(.wrap),
+:global(#wpfooter) {
+
+  a {
+    color: var(--wp-admin-theme-color);
+
+    &:focus {
+      box-shadow: 0 0 0 2px var(--wp-admin-theme-color);
+    }
+  }
+}
 
 .topBar {
+  position: sticky;
+  top: var(--wp-admin--admin-bar--height);
   margin-top: -10px;
   margin-inline: -22px -20px;
   padding-block: 1em;
   padding-inline: 22px 20px;
   background-color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, .1);
+  z-index: 9999;
 
   svg {
     max-width: 2em;
@@ -26,11 +41,20 @@
   }
 }
 
-.mainNav :global(.components-tab-panel__tabs) {
-  background-color: #fff;
-  box-shadow: rgba(0, 0, 0, .1) 0 0 0 1px;
-  border-radius: 7px;
-  overflow: hidden;
+.mainNav {
+
+  :global(.components-tab-panel__tabs) {
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, .1) 0 0 0 1px;
+    border-radius: 7px;
+    overflow: hidden;
+  }
+}
+
+.inner {
+  max-width: 800px;
+  margin-inline: auto;
 }
 
 .snackbar {

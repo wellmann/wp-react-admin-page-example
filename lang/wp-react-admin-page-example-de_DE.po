@@ -1,0 +1,113 @@
+# Copyright (C) 2022 Kevin Wellmann
+# This file is distributed under the GPL-3.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: React Admin Page Example 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-react-admin-"
+"page-example\n"
+"POT-Creation-Date: 2024-12-08T13:32:43+00:00\n"
+"PO-Revision-Date: 2024-12-08 14:33+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Domain: kwio-react-page\n"
+
+#. Plugin Name of the plugin
+msgid "React Admin Page Example"
+msgstr "React Admin Seite Beispiel"
+
+#. Plugin URI of the plugin
+msgid "https://github.com/wellmann/wp-react-admin-page-example"
+msgstr ""
+
+#. Description of the plugin
+msgid "WordPress admin page developed with React and Gutenberg components."
+msgstr "WordPress-Admin-Seite, entwickelt mit React und Gutenberg-Komponenten."
+
+#. Author of the plugin
+msgid "Kevin Wellmann"
+msgstr ""
+
+#: src/hooks.php:7 src/hooks.php:8
+msgid "React Page"
+msgstr "React Seite"
+
+#: dist/app.js:141 dist/app.js:192
+msgid "Heading"
+msgstr "Überschrift"
+
+#: dist/app.js:146
+msgid "Options"
+msgstr "Optionen"
+
+#: dist/app.js:149 dist/app.js:151
+msgid "First option"
+msgstr "Erste Option"
+
+#: dist/app.js:154 dist/app.js:155
+msgid "Second option"
+msgstr "Zweite Option"
+
+#: dist/app.js:165
+msgid "Help text to explain the input."
+msgstr "Hilfetext zur Erklärung der Eingabe."
+
+#: dist/app.js:166
+msgid "Label Text"
+msgstr "Label-Text"
+
+#: dist/app.js:178
+msgid "Save"
+msgstr "Speichern"
+
+#: dist/app.js:254
+msgid "This is an example error message."
+msgstr "Dies ist ein Beispiel für eine Fehlermeldung."
+
+#: dist/app.js:255
+msgid "Example success"
+msgstr "Beispiel Erfolgsmeldung"
+
+#: dist/app.js:279
+msgid "Click me!"
+msgstr "Klick mich!"
+
+#: dist/app.js:283
+msgid "Or visit a link for more info"
+msgstr "Oder besuchen Sie einen Link für weitere Informationen"
+
+#: dist/app.js:289
+msgid "Announcement banner"
+msgstr "Ankündigungsbanner"
+
+#: dist/app.js:304
+msgid "Tab 1"
+msgstr "Reiter 1"
+
+#: dist/app.js:309
+msgid "Tab 2"
+msgstr "Reiter 2"
+
+#: dist/app.js:314
+msgid "Tab 3"
+msgstr "Reiter 3"
+
+#: dist/app.js:382
+msgid "Help"
+msgstr "Hilfe"
+
+#: dist/app.js:402
+msgid "Created with <3 using"
+msgstr "Erstellt mit <3 unter Verwendung von"
+
+#: dist/app.js:420
+msgid "App version"
+msgstr "App-Version"
+
+#~ msgid "WordPress components"
+#~ msgstr "WordPress-Komponenten"

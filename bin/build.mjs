@@ -134,6 +134,9 @@ const buildOptions = {
   bundle: true,
   minify: !isWatchMode,
   sourcemap: isWatchMode,
+  define: {
+    __BUILD_TIMESTAMP__: Date.now().toString(),
+  },
   target: 'es6',
   logLevel: 'info',
   platform: 'browser',
