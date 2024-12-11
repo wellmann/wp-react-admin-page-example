@@ -1,4 +1,4 @@
-import { useEffect, useState } from "@wordpress/element";
+import { useEffect, useState } from '@wordpress/element';
 
 const useSearchParams = (param: string, defaultValue: string) => {
   const { pathname, search } = window.location;

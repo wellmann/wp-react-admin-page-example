@@ -1,5 +1,5 @@
 import apiFetch from '@wordpress/api-fetch';
-import { useEffect, useState } from "@wordpress/element";
+import { useEffect, useState } from '@wordpress/element';
 
 interface Language {
   name: string;

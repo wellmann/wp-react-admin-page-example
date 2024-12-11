@@ -1,6 +1,6 @@
 import { useRef } from '@wordpress/element';
 import { ExternalLink } from '@wordpress/components';
-import { __ } from "@wordpress/i18n";
+import { __ } from '@wordpress/i18n';
 
 interface Props {
   targetElem: HTMLElement;
@@ -17,8 +17,10 @@ const FooterLeft = ({ targetElem }: Props) => {
 
   return (
     <span id="footer-thankyou">
-      { __('Created with <3 using', 'wp-react-admin-page-example') + ' ' }
-      <ExternalLink href="https://wordpress.github.io/gutenberg/">@wordpress/components</ExternalLink>
+      {__('Created with <3 using', 'wp-react-admin-page-example') + ' '}
+      <ExternalLink href="https://wordpress.github.io/gutenberg/">
+        @wordpress/components
+      </ExternalLink>
     </span>
   );
 };

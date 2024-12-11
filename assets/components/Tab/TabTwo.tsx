@@ -1,5 +1,5 @@
-import { __experimentalGrid as Grid } from "@wordpress/components";
-import Box from "../Box";
+import { __experimentalGrid as Grid } from '@wordpress/components';
+import Box from '../Box';
 
 const TabTwo = () => {
   return (
@@ -8,9 +8,9 @@ const TabTwo = () => {
       gap={10}
       templateColumns="repeat(auto-fit, minmax(300px, 1fr))"
     >
-      <Box/>
-      <Box/>
-      <Box/>
+      <Box />
+      <Box />
+      <Box />
     </Grid>
   );
 };

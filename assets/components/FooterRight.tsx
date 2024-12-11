@@ -1,5 +1,5 @@
 import { useRef } from '@wordpress/element';
-import { __ } from "@wordpress/i18n";
+import { __ } from '@wordpress/i18n';
 
 interface Props {
   targetElem: HTMLElement;
@@ -18,8 +18,8 @@ const FooterRight = ({ targetElem }: Props) => {
 
   return (
     <>
-      { __('App version', 'wp-react-admin-page-example') + ': ' }
-      { __BUILD_TIMESTAMP__ }
+      {__('App version', 'wp-react-admin-page-example') + ': '}
+      {__BUILD_TIMESTAMP__}
     </>
   );
 };

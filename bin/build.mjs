@@ -128,7 +128,7 @@ const wpDepsPlugin = {
 
 const buildOptions = {
   entryPoints: {
-    app: './assets/entry.jsx'
+    app: './assets/entry.jsx',
   },
   outdir: 'dist',
   bundle: true,
@@ -144,11 +144,7 @@ const buildOptions = {
   jsxImportSource: 'react',
   jsxFragment: 'wp.element.Fragment',
   tsconfig: './tsconfig.json',
-  plugins: [
-    svgr(),
-    wpDepsPlugin,
-    cleanup()
-  ]
+  plugins: [svgr(), wpDepsPlugin, cleanup()],
 };
 
 if (isWatchMode) {

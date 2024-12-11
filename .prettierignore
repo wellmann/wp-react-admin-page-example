@@ -1,0 +1,6 @@
+/.github/
+/dist/
+/lang/
+/vendor/
+/composer.json
+/composer.lock
