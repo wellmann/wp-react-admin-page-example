@@ -4,11 +4,8 @@
     "license": "GPL-3.0",
     "autoload": {
         "psr-4": {
-            "Kwio\\ReactAdminPage\\": "src/"
-        },
-        "files": [
-            "src/hooks.php"
-        ]
+            "KWIO\\React_Admin_Page\\": "src/"
+        }
     },
     "authors": [
         {
@@ -18,7 +15,18 @@
     ],
     "scripts": {
         "make-pot": "wp i18n make-pot . lang/wp-react-admin-page-example.pot",
-        "make-json": "wp i18n make-json lang --no-purge"
+        "make-json": "wp i18n make-json lang --no-purge",
+        "cs:check": "phpcs -ps . --extensions=php --ignore=*/dist/*,*/node_modules/*,*/vendor/* --standard=WordPress",
+        "cs:fix": "phpcbf  -ps . --extensions=php --ignore=*/dist/*,*/node_modules/*,*/vendor/* --standard=WordPress"
     },
-    "require": {}
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^3.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "squizlabs/php_codesniffer": "^3.11"
+    }
 }
